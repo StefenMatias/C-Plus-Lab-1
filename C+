@@ -1,0 +1,57 @@
+#include <iostream>
+#include <string>
+#include <math.h>
+
+using namespace std;
+int main()
+{
+
+// declaring variables needed throughout entire code
+
+  int x;                // x coordinate of vector 1
+  int y;		// y coordinate of vector 1
+  int a;		// x coordinate of vector 2
+  int b;		// y coordinate of vector 2
+  int dp;		// dot product value
+  int cp;		// cross product value
+  int s1;		// sum of 2 vectors x
+  int s2;		// sum of 2 vectors y
+  double scalar;	// scalar value
+  double scalarx;	// value post scalar x
+  double scalary;	// value post scalar y
+  double n;		// value of the magnitude of vector 1
+  double x1;		// value of x of the normal vector of vector 1
+  double y1;		// value of y of the normal vector of vector 1
+  
+  cout<<"Input the x coordinate of the vector:";        //allows user to type in the x of the vector
+  cin>>x;						//applies that value to x variable
+  cout<<"Input the y coordinate of the vector";		//allows user to type in the y of the vector
+  cin>>y;						//applies that value to x variable
+  n=sqrt(x*x + y*y);                                    //magnitude of vector 1 equation
+  x1=x/n;						//normal of vector 1 (x)
+  y1=y/n;						//normal of vector 1 (y)
+  cout << "The normal of this vector is [" << x1 << "," << y1 <<"]";   //displays the normal to the user 
+  cout<<"\n";							       //skips to next line
+  cout<<"Input a scalar quantity to multiply the original vector by:"; //allows an input for scalar
+  cin>>scalar;							       //applies to variable
+  scalarx = scalar*x;						       //applies to x
+  scalary = scalar*y;						       //applies to y
+  cout << "The new vector is [" << scalarx << "," << scalary <<"]";    //displays on screen as a vector
+  cout<<"\n";
+  cout<<"Input the x of your second vector you would like to preform dot and cross product with:";  //allows x input for second vector 2
+  cin>> a;											    //apply to variable
+  cout<<"Input the y of your second vector you would like to preform dot and cross product with:";  //allows y input for second vector 2
+  cin>> b;											    //apply to variable
+  dp = (a*x + b*y);										    //dot product equation
+  cp = (x*b - a*y);										    //cross product equation
+  s1 = (a+x);											    //vector addition with x
+  s2 = (b+y);											    //vector addition with y
+  cout<<"The dot product is equal to " <<dp;							    //displays dot product
+  cout<<"\n";
+  cout<<"The cross product is [0,0," << cp << "]";						    // displays cross product
+  cout<<"\n";
+  cout<<"The sum of the two vectors equals [" << s1 << "," << s2 << "]";			    //displays the sum of the two vectors
+  
+  
+  
+}
